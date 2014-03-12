@@ -1,0 +1,178 @@
+@import "normalize.less";
+
+.reset () {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 10px;
+}
+
+h1 {
+	font-size: 2.0em;
+}
+h2 {
+	font-size: 1.8em;
+}
+p {
+	font-size: 1.4em;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	display: block;
+}
+
+@red: rgba(173, 20, 22, 1);
+
+a {
+	color: @red;
+}
+
+#container {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	padding: 10px 0 30px 0;
+	width: 93.75%;
+}
+
+#nav {
+	margin: 0 0 20px;
+	ul {
+		.reset();
+	}
+	li {
+		float: left;
+		margin: 0 20px 0 0;
+		font-size: 1.6em;
+	}
+}
+
+.tabs {
+	nav {
+		ul {
+			.reset();
+		}
+		li {
+			float: left;
+			margin: 0 10px 0 0;
+			font-size: 1.4em;
+			cursor: pointer;
+			border: 1px solid #ac0e0d;
+			border-bottom: 0;
+			background: #ac0e0d;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			padding: 5px 15px;
+			color: #fff;
+			top: 1px;
+			position: relative;
+		}
+		li.active {
+			background: #f2f2f2;
+			border-color: #ddd;
+			color: #333;
+			z-index: 3;
+		}
+	}
+	.tab { 
+		display: none; 
+		
+		border: 1px solid #ddd;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-top-right-radius: 5px;
+		position: relative;
+		z-index: 2;
+	}
+	.tab.active { display: block; } 
+}
+
+.listing {
+	.reset();
+	border: 1px solid #ddd;
+}
+
+.tab {
+	.listing { border: 0; }
+}
+
+.teams {
+	li.item {
+		float: left;
+		font-size: 1.6em;
+		width: 20%;
+		margin: 0 0 10px;
+	}
+}
+
+.feed {
+	h2 {
+		font-size: 1.3em;
+		margin: 0 0 4px;
+	}
+	li.item {
+		border-bottom: 1px solid #ddd;
+		padding: 10px;
+		background: #f2f2f2;
+	}
+	li.item:last-child { border: 0; }
+	.col_a {
+		float: left;
+		margin: 0 20px 0 0;
+		max-width: 16%;
+	}
+	.col_b {
+		float: left;
+		width: 80%;
+	}
+	.photo {
+		.credit {
+			font-size: 1em;
+			color: #b2b2b2;
+		}
+	}
+	.desc {
+		font-size: 1.2em;
+	}
+	.one_col {
+		.col_a { display: none; }
+		.col_b {
+			float: none;
+			width: auto;
+		}
+	}
+	.cats {
+		.reset();
+		li {
+			float: left;
+			font-size: 1.0em;
+			margin: 0 10px 0 0;
+			color: #888;
+		}
+		li:last-child { margin-right: 0; }
+		a { color: #888; }
+		a:hover { color: #333; }
+	}
+}
+.show_more {
+	cursor: pointer;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	background: @red;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #fff;
+}

@@ -1,0 +1,6 @@
+<!--<input type="text" ng-model="nameFilter" placeholder="Search..."/>-->
+<ul class="listing feed">
+	<li ng-repeat="feedItem in feed" ng-class="feedItem.images[0] ? 'two_col' : 'one_col'" class="item">
+		<news-template></news-template>
+	</li>
+</ul>

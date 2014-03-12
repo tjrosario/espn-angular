@@ -1,0 +1,16 @@
+<div id="news">
+	<div class="tabs">
+		<nav>
+			<ul class="clear">
+				<li ng-repeat="tab in newsTabs">{{ tab.feed.tabName }}</li>
+			</ul>
+		</nav>
+		<div class="tab" ng-repeat="tab in newsTabs">
+			<ul class="listing feed">
+				<li ng-repeat="feedItem in tab.feed" ng-class="feedItem.images[0] ? 'two_col' : 'one_col'" class="item">
+					<news-template></news-template>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div>	
+	<h2><a href="{{ feedItem.links.web.href }}">{{ feedItem.headline }}</a></h2>
+	<div class="clear">
+		<div class="col_a">
+			<div class="photo">
+				<a href="{{ feedItem.links.web.href }}"><img src="{{ feedItem.images[0].url }}" alt="{{ feedItem.images[0].name }}" title="{{ feedItem.images[0].caption }}"></a>
+				<div class="credit" ng-show="feedItem.images[0].credit">{{ feedItem.images[0].credit }}</div>
+			</div>
+		</div>
+		<div class="col_b">
+			<div class="desc">{{ feedItem.description }}</div>
+			<div class="source" ng-show="source">{{ feedItem.byline }}&#44; {{ feedItem.source }}</div>
+			<ul class="cats clear">
+				<li ng-repeat="category in feedItem.categories">
+					<div ng-if="category.league.links.web.leagues.href">
+						<a href="{{ category.league.links.web.leagues.href }}">{{ category.description }}</a>
+					</div>
+					<div ng-if="!category.league.links.web.leagues.href">
+						{{ category.description }}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
